@@ -1,0 +1,25 @@
+[general]
+# mainnet || testnet
+network = "mainnet"
+
+# Program execution period(minutes).
+period = 60
+
+cons_grpc = "celestia.grpc.com:9090"
+grpc_secure_connection = false
+
+# Be careful not to leak api_token.
+da_api = "https://da-api:26658"
+api_token = ""
+
+listen_port = 8080
+
+[tg]
+enable = true
+token = ""
+chat_id = ""
+
+[alarm-criteria]
+# The value for trigger alert, 
+# different with consensus height and bridge height.
+height_differ = 2
