@@ -48,8 +48,8 @@ func main() {
 	tgTitle := fmt.Sprintf("🤖 Celmon for %s 🤖\nStatus Server: [Link](%s:%d)\n", cfg.General.Network, publicIp, cfg.General.ListenPort)
 	tg.SetTg(cfg.Tg.Enable, tgTitle, cfg.Tg.Token, cfg.Tg.ChatID)
 
+	go server.Run(cfg.General.ListenPort)
 	for {
-		go server.Run(cfg.General.ListenPort)
 		app.Run(ctx, &cfg)
 		time.Sleep(time.Duration(cfg.General.Period) * time.Minute)
 	}
