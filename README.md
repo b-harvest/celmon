@@ -27,5 +27,4 @@ cp config.toml.example config.toml
 
 ```bash
 ./celmon -config config.toml
-`
 ```
